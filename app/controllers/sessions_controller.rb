@@ -17,8 +17,4 @@ class SessionsController < ApplicationController
     redirect_to sessions_login_path, notice: "Successfully logged out."
   end
 
-  def edit_login
-      
-  end
-
 end

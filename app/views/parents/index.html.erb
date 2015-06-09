@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <p><%= "Hello, " + @user.name %></p>
-<%= link_to "Account Settings", sessions_edit_login_path %>
+<%= link_to "Account Settings", edit_user_path(@user) %>
 <h1>Listing Parents</h1>
 
 <table>
