@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'sessions/login'
   post 'sessions/login'
   get 'sessions/logout'
-
+  get 'sessions/edit_login'
+  patch 'sessions/edit_login'
   root 'sessions#login'
   resources :parents
   # The priority is based upon order of creation: first created -> highest priority.
