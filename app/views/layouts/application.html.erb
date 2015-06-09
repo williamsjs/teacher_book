@@ -9,6 +9,8 @@
 <body>
   <%= link_to "Logout", sessions_logout_path if session[:user_id] %>
   <%= link_to "Home", parents_path if session[:user_id] %>
+    <% user = User.find_by_id(session[:user_id]) if session[:user_id]%>
+  <%= content_tag(:p, "Hello " + user.name) if session[:user_id]%>
   <p id="notice"><%= notice %></p>
   <%= yield %>
 
