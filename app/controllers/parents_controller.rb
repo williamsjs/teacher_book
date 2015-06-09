@@ -6,6 +6,7 @@ class ParentsController < ApplicationController
   # GET /parents.json
   def index
     @parents = Parent.all
+    @user = User.find_by_id(session[:user_id])
   end
 
   # GET /parents/1
@@ -70,7 +71,7 @@ class ParentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parent_params
-      params.require(:parent).permit(:student_name, :parent_name, :email)
+      params.require(:parent).permit(:student_name, :parent_name, :email, :user_id)
     end
 
     def logged_in?
