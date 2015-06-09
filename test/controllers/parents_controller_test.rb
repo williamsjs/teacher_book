@@ -18,7 +18,7 @@ class ParentsControllerTest < ActionController::TestCase
 
   test "should create parent" do
     assert_difference('Parent.count') do
-      post :create, parent: { email: @parent.email, parent_name: @parent.parent_name, student_name: @parent.student_name }
+      post :create, parent: { email: @parent.email, parent_name: @parent.parent_name, student_name: @parent.student_name, user_id: @parent.user_id }
     end
 
     assert_redirected_to parent_path(assigns(:parent))
@@ -35,7 +35,7 @@ class ParentsControllerTest < ActionController::TestCase
   end
 
   test "should update parent" do
-    patch :update, id: @parent, parent: { email: @parent.email, parent_name: @parent.parent_name, student_name: @parent.student_name }
+    patch :update, id: @parent, parent: { email: @parent.email, parent_name: @parent.parent_name, student_name: @parent.student_name, user_id: @parent.user_id }
     assert_redirected_to parent_path(assigns(:parent))
   end
 
